@@ -8,6 +8,11 @@ class Oppilas extends CI_Controller {
     $data['sivu'] = 'oppilas/nayta_oppilaat';
 
     $this->load->view('menu/content',$data);
-    
+
+  }
+  public function poista_oppilas($id){
+    $this->load->model('Oppilas_model');
+    $this->Oppilas_model->poista_valittu($id);
+    redirect('oppilas/nayta_oppilaat');
   }
 }

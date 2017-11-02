@@ -1,7 +1,12 @@
 <h1>Opiskelijat</h1>
-<h1>Data tietokannasta:</h1>
-<?php
-foreach ($oppilaat as $data) {
-  echo $data["etunimi"].' , '.$data["sukunimi"].'<br>';
-}
- ?>
+<table border ="1">
+  <tr>
+    <th>Etunimi</th><th>Sukunimi</th><th>Syntymavuosi</th><th>Poista</th>
+  </tr>
+  <?php
+  foreach ($oppilaat as $data) {
+    echo '<tr><td>'.$data["etunimi"].'</td><td>'.$data["sukunimi"].'</td><td>'.$data["syntymavuosi"].'</td><td><a href="'.site_url('oppilas/poista_oppilas/').$data["idOpiskelija"].'">Click</a></td></tr>';
+  }
+   ?>
+
+</table>

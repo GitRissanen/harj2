@@ -9,4 +9,8 @@ class Oppilas_model extends CI_Model{
     return $this->db->get()->result_array();
 
   }
+  public function poista_valittu($id){
+    $this->db->where('idOpiskelija',$id);
+    $this->db->delete('opiskelija');
+  }
 }
