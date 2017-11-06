@@ -15,4 +15,15 @@ class Oppilas extends CI_Controller {
     $this->Oppilas_model->poista_valittu($id);
     redirect('oppilas/nayta_oppilaat');
   }
+
+  public function lisays_lomake(){
+    $data['sivu'] = "oppilas/lisays_lomake";
+    $this->load->view("menu/content",$data);
+  }
+  public function lisaa_opiskelija(){
+    $this->load->model('Oppilas_model');
+    $lisaa_data = array("etunimi"=>$this->input->post('en'), "sukunimi"=>$this->input->post('sn'),"syntymavuosi"=>$this->input->post('sv'));
+    $this->Oppilas_model->lisaa_tietokantaan($lisaa_data);
+    redirect('oppilas/nayta_oppilaat');
+  }
 }
