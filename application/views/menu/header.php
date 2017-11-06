@@ -11,5 +11,7 @@
       <li><a href=<?php echo site_url('Test/kolmas');?>>Test/kolmas</a></li>
       <li><a href=<?php echo site_url('Test/neljas');?>>Test/neljas</a></li>
       <li><a href=<?php echo site_url('Oppilas/nayta_oppilaat');?>>NäytäOppilaat</a></li>
+      <li><a href=<?php echo site_url('Login/avaa_lomake');?>>Kirjaudu</a></li>
+      <li><a href=<?php echo site_url('Login/kirjaudu_ulos');?>>Kirjaudu ulos</a></li>
     </ul>
     <div class="content">
